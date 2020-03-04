@@ -27,5 +27,16 @@ namespace RPS.Tests
       // Assert
       Assert.AreEqual("Draw! Play again.", result);
     }
+    // [TestMethod]
+    // public void RockPaperScissors_CheckInput_False()
+    // {
+    //   // Arrange
+    //   RockPaperScissors newPlay = new RockPaperScissors();
+    //   // Act
+    //   bool result = newPlay.CheckInput("!","k");
+    //   // Assert
+    //   Assert.AreEqual(false, result);
+
+    // }
   }
 }

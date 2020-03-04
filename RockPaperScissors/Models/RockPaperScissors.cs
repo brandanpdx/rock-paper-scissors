@@ -15,18 +15,17 @@ namespace RPS.Models
 
     public string WinCheck(string player1Answer, string player2Answer)
     {
-
       if (player1Answer == player2Answer)
       {
-        return "Draw! Play again.";
+        return "0";
       }
       else if ((player1Answer == "R" && player2Answer == "S") || (player1Answer == "P" && player2Answer == "R") || (player1Answer == "S" && player2Answer == "P"))
       {
-        return "Player 1 Wins!";
+        return "1";
       }
       else
       {
-        return "Player 2 Wins!";
+        return "2";
       }
     }
   }
