@@ -1,16 +1,31 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName.Models;
+using RPS.Models;
+using System;
 
-namespace ProjectName.Tests
+namespace RPS.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class RockPaperScissorsTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void RockPaperScissors_WinCheck_Player1()
     {
-    // any necessary logic to prep for test; instantiating new classes, etc.
-    Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      //Arrange 
+      RockPaperScissors newPlay = new RockPaperScissors();
+      // Act
+      string result = newPlay.WinCheck("R", "S");
+      // Assert
+      Assert.AreEqual("Player 1 Wins!", result);
+    }
+    [TestMethod]
+    public void RockPaperScissors_WinCheck_Draw()
+    {
+      // Arrange
+      RockPaperScissors newPlay = new RockPaperScissors();
+      // Act
+      string result = newPlay.WinCheck("R", "R");
+      // Assert
+      Assert.AreEqual("Draw! Play again.", result);
     }
   }
 }
